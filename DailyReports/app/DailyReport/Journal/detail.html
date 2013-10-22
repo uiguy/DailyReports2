@@ -1,0 +1,41 @@
+<div class="navbar navbar-default navbar-fixed-top container">
+    <div class="row">
+        <div class="col-xs-3 navbar-left">
+            <button class="btn btn-default" ng-click="goToStart();">Cancel</button>
+        </div>
+        <div class="col-xs-6 text-center navbar-center" >Journal</div>
+        <div class="col-xs-3 text-right navbar-right">
+            <button class="btn btn-default" ng-click="saveJournalEntry();">Done</button>
+        </div>
+    </div>
+</div>
+<div class="container" >
+    <p>
+        <button ng-show="!isWarning" class="btn btn-default" ng-click="isWarning = !isWarning;">
+            Risk Item&nbsp;<i class="icon-warning-sign"></i>
+        </button>
+        <button ng-show="isWarning" class="btn btn-warning" ng-click="isWarning = !isWarning;">
+            Risk Item&nbsp;<i class="icon-warning-sign"></i>
+        </button>
+    </p>
+    <textarea style="width: 100%;" rows="6"></textarea>
+    <p>
+        Pictures<br>
+        <button class="btn btn-primary" ng-click="capturePhoto();">
+            <i class="icon-camera"></i> Camera
+        </button>
+        <button class="btn btn-primary" ng-click="captureFromAlbum();">
+            <i class="icon-picture"></i> Photo Album
+        </button>
+    </p>
+    <div>
+        <div class="row" ng-repeat="photo in photos">
+            <div class="col-xs-11">
+                <img ng-src="{{photo.imageData}}" style="width: 100%;">
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-remove"></i>
+            </div>
+        </div>
+    </div>
+</div>

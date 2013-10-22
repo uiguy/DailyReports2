@@ -1,0 +1,96 @@
+<div class="navbar navbar-default navbar-fixed-top container">
+    <div class="row">
+        <div class="col-xs-3 navbar-left">
+        </div>
+        <div class="col-xs-6 text-center navbar-center" >
+            Daily Report<br>
+            <div style="font-size: 12px;" >9/09/2013 - Today</div>
+        </div>
+        <div class="col-xs-3 text-right navbar-right">
+            <a href="#selectDateModal" data-toggle="modal" class="btn btn-default">
+                <i class="icon-caret-down"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="list-group" id="project-selector">
+        <a class="list-group-item">
+            Chadsworth Tower
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">Observations</div>
+        <div class="col-xs-6">
+            <div style="float: right; font-size: 20px;">
+                <span class="icon-circle-blank text-primary" ng-show="!imdone" ng-click="imdone = !imdone"><span class='text-muted'> &nbsp;I'm Done</span></span>
+                <span class="icon-ok text-success" ng-show="imdone" ng-click="imdone = !imdone"> &nbsp;I'm Done</span>
+               
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="list-group">
+    <a class="list-group-item" ng-click="goToJournalList();" >
+        <div class="row bigrow">
+            <div class="col-xs-6">
+                <i class="icon-file-text-alt"></i> Journal
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-warning-sign" style="color: goldenrod;"></i>
+            </div>
+            <div class="col-xs-1"><span class="fred">1</span></div>
+            <div class="col-xs-1">
+                <i class="icon-angle-right icon-2x"></i>
+            </div>
+            <div class="col-xs-3 text-center break"  ng-click="goToAddJournal(); $event.stopPropagation();" >+</div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToWeatherList();" >
+        <div class="row bigrow">
+            <div class="col-xs-7" ng-click="goToAddWeather()">
+                <i class="icon-cloud"></i> Weather
+            </div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToPhotoList();" >
+        <div class="row bigrow">
+            <div class="col-xs-7"  ng-click="goToAddPhoto(); $event.stopPropagation();">
+                <i class="icon-camera"></i> Photo
+            </div>
+        </div>
+    </a>
+    <a class="list-group-item" ng-click="goToAddManpower(); $event.stopPropagation();" >
+        <div class="row bigrow">
+            <div class="col-xs-7">
+                <i class="icon-wrench"></i> Manpower
+            </div>
+        </div>
+    </a>
+    <a class="list-group-item" >
+        <div class="row bigrow">
+            <div class="col-xs-7">
+                <i class="icon-user"></i> Visitor
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="selectDateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body container">
+                <div class="list-group" style="font-size: 18px;">
+                    <a class="list-group-item" data-dismiss="modal">Today</a>
+                    <a class="list-group-item" data-dismiss="modal">This Week</a>
+                    <a class="list-group-item" data-dismiss="modal">Another Day...</a>
+                    <a class="list-group-item" data-dismiss="modal">Another Week...</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

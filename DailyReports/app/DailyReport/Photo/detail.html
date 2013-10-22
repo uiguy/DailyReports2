@@ -1,0 +1,34 @@
+<div class="navbar navbar-default navbar-fixed-top container">
+    <div class="row">
+        <div class="col-xs-3 navbar-left">
+            <button class="btn btn-default" ng-click="goToList();">Cancel</button>
+        </div>
+        <div class="col-xs-6 text-center navbar-center" >Photo</div>
+        <div class="col-xs-3 text-right navbar-right">
+            <button class="btn btn-default" ng-click="savePhotoEntry();">Done</button>
+        </div>
+    </div>
+</div>
+<div class="container" >
+    <p></p>
+    Pictures<br>
+    <button class="btn btn-primary" ng-click="capturePhoto();">
+        <i class="icon-camera"></i> Camera
+    </button>
+    <button class="btn btn-primary" ng-click="captureFromAlbum();">
+        <i class="icon-picture"></i> Photo Album
+    </button>
+    <p></p>
+    <textarea style="width: 100%;" rows="6"></textarea>
+    <p></p>
+    <div>
+        <div class="row" ng-repeat="photo in photos">
+            <div class="col-xs-11">
+                <img ng-src="{{photo.imageData}}" style="width: 100%;">
+            </div>
+            <div class="col-xs-1">
+                <i class="icon-remove"></i>
+            </div>
+        </div>
+    </div>
+</div>

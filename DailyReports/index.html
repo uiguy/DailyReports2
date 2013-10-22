@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/bootstrap-timepicker.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css" />
+
+        <script type="application/javascript" src="lib/jquery.js"></script>
+        <script type="application/javascript" src="lib/bootstrap.js"></script>
+        <script type="application/javascript" src="lib/angular.js"></script>
+        <script type="application/javascript" src="lib/angular-ui-router.js"></script>
+        <script type="application/javascript" src="lib/date.js"></script>
+        <script type="application/javascript" src="lib/bootstrap-timepicker.min.js"></script>
+
+        <script type="application/javascript" src="app/app.js"></script>
+        <script type="application/javascript" src="app/dataService.js"></script>
+        <script type="application/javascript" src="app/DailyReport/DailyReportController.js"></script>
+        <script type="application/javascript" src="app/DailyReport/Journal/JournalController.js"></script>
+        <script type="application/javascript" src="app/DailyReport/Manpower/ManpowerController.js"></script>
+        <script type="application/javascript" src="app/DailyReport/Photo/PhotoController.js"></script>
+        <script type="application/javascript" src="app/DailyReport/Weather/WeatherController.js"></script>
+
+<!--        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script type="application/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+-->
+        <script type="application/javascript">
+            if (!('contains' in String.prototype))
+                String.prototype.contains = function(str, startIndex) {
+                    return -1 !== String.prototype.indexOf.call(this, str, startIndex);
+                };
+        </script>
+    </head>
+
+    <body>
+        <div ng-view>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

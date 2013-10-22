@@ -1,0 +1,87 @@
+<div class="navbar navbar-default navbar-fixed-top container">
+    <div class="row">
+        <div class="col-xs-3 navbar-left">
+            <button class="btn btn-default" ng-click="goToList();">Cancel</button>
+        </div>
+        <div class="col-xs-6 text-center navbar-center" >Manpower</div>
+        <div class="col-xs-3 text-right navbar-right">
+            <button class="btn btn-default" ng-click="saveManpowerEntry();">Done</button>
+        </div>
+    </div>
+</div>
+<div class="container" >
+    <div class="list-group">
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-4 form_label">
+                    Company
+                </div>
+                <div class="col-xs-7"><div style="float: right;">Gotham Steel</div></div>
+                <div class="col-xs-1">
+                    <i class="icon-angle-right"></i>
+                </div>
+            </div>
+        </a>
+
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-7 form_label">
+                    Headcount
+                </div>
+                <div class="col-xs-5" style="overflow-x: hidden;">
+                    <input type="text" class="form-control" value="3" style="font-size: 18px;">
+                </div>
+            </div>
+        </a>
+
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-7 form_label">
+                    Hours
+                </div>
+                <div class="col-xs-5" style="overflow-x: hidden;">
+                    <input type="text" class="form-control" value="24" style="font-size: 18px;">
+                </div>
+            </div>
+        </a>
+
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-7 form_label">
+                    Start Time
+                </div>
+                <div class="col-xs-5" style="overflow-x: hidden;">
+                    <input type="text" class="form-control" placeholder="Start Time" value="6:02 AM" style="font-size: 18px; ">
+                </div>
+            </div>
+        </a>
+
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-7 form_label">
+                    Stop Time
+                </div>
+                <div class="col-xs-5">
+                    <input id="starttime" type="text" class="form-control" placeholder="Start Time" value="4:08 PM" style="font-size: 18px; ">
+                </div>
+            </div>
+        </a>
+
+        <a class="list-group-item" ng-click="" >
+            <div class="row bigrow">
+                <div class="col-xs-11">
+                    <div class="form_label">
+                        Note
+                    </div>All hour holes are cut in machine room and the temporary infalls are complete. 3 of 4 grates are covered.
+                </div>
+                <div class="col-xs-1">
+                    <i class="icon-angle-right"></i>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+<script>
+    $('#starttime').timepicker();
+</script>
