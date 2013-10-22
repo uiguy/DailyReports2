@@ -10,14 +10,11 @@
     </div>
 </div>
 <div class="container" >
-    <p>
-        <button ng-show="!isWarning" class="btn btn-default" ng-click="isWarning = !isWarning;">
-            Risk Item&nbsp;<i class="icon-warning-sign"></i>
-        </button>
-        <button ng-show="isWarning" class="btn btn-warning" ng-click="isWarning = !isWarning;">
-            Risk Item&nbsp;<i class="icon-warning-sign"></i>
-        </button>
-    </p>
+    <div style="float: right; font-size: 20px;">
+                 <span class="icon-circle-blank text-primary" ng-show="!isWarning" ng-click="isWarning = !isWarning;"> &nbsp;Risk</span>
+                <span class="icon-warning-sign text-warning" ng-click="isWarning = !isWarning;" ng-show="isWarning"><span class="text-danger">&nbsp;Risk</span></span>
+    </div>
+
     <textarea style="width: 100%;" rows="6"></textarea>
     <p>
         Pictures<br>

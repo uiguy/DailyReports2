@@ -9,9 +9,14 @@
         </div>
     </div>
 </div>
+<div style="position:static; height:40px">
+    <div style="position:absolute; right:10px; font-size: 20px;">
+                 <span class="icon-circle-blank text-primary" ng-show="!isWarning" ng-click="isWarning = !isWarning;"> &nbsp;Risk</span>
+                <span class="icon-warning-sign text-warning" ng-click="isWarning = !isWarning;" ng-show="isWarning"><span class="text-danger">&nbsp;Risk</span></span>
+    </div>
+</div>
 <div class="container" >
-    <p></p>
-    Pictures<br>
+    Picture<br>
     <button class="btn btn-primary" ng-click="capturePhoto();">
         <i class="icon-camera"></i> Camera
     </button>
@@ -19,6 +24,7 @@
         <i class="icon-picture"></i> Photo Album
     </button>
     <p></p>
+    Note:
     <textarea style="width: 100%;" rows="6"></textarea>
     <p></p>
     <div>
